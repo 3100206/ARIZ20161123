@@ -1,0 +1,6 @@
+#Windows
+.gradle/*
+build/*
+build*
+gradle/*
+local*

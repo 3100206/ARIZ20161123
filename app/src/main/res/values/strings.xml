@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">ARIZ</string>
+    <string name="title_activity_ariz">ArizActivity</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_applicate">ApplicateActivity</string>
+    <string name="title_activity_browse">BrowseActivity</string>
+    <string name="title_activity_favorate">FavorateActivity</string>
+    <string name="title_activity_user">UserActivity</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

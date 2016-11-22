@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/content_ariz"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    tools:context="com.rensisi.ariz.ariz.ui.ArizActivityFragment"
+    tools:showIn="@layout/activity_ariz">
+
+    <TextView
+        android:text="TextView"
+        android:background="@color/colorAccent"
+        android:id="@+id/tv_fragment_applicate"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+    <TextView
+        android:text="Imageview"
+        android:background="@color/colorPrimary"
+        android:id="@+id/iv_fragment_applicate"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+
+
+</RelativeLayout>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="list_ariz">
+        <item>什么是ARIZ</item>
+        <item>ATIZ中的ARIZ</item>
+        <item>应用流程　</item>
+    　　　
+    </string-array >
+
+</resources>

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TextView
+        android:text="second_fg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="134dp" >
+        <!-- 默认选择 ：是-->
+        <RadioButton
+            android:id="@+id/yes1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="是" />
+
+        <RadioButton
+            android:checked="true"
+
+            android:id="@+id/no1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="否" />
+    </RadioGroup>
+
+    <RadioGroup
+        android:id="@+id/radioGroup2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="134dp" >
+        <!-- 默认选择 ：是-->
+        <RadioButton
+            android:id="@+id/yes2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="是" />
+
+        <RadioButton
+            android:checked="true"
+
+            android:id="@+id/no2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="否" />
+    </RadioGroup>
+
+
+
+
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <Button
+            android:text="下一步"
+            android:id="@+id/next_second_fgm"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+
+</LinearLayout>
