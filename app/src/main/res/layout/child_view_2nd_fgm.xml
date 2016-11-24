@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <TextView
+        android:text="技术系统的主要目的是:"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <EditText
+        android:text=" "
+        android:inputType="textMultiLine"
+        style="@style/Base.V7.Widget.AppCompat.EditText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:text="主要子系统包括:"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <EditText
+        style="@style/Base.V12.Widget.AppCompat.EditText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:text="技术系统和它的子系统的有用功能是:"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <EditText
+        style="@style/Base.Widget.AppCompat.EditText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:text="有害功能是:"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <EditText
+        style="@style/Widget.AppCompat.EditText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+
+
+</LinearLayout>

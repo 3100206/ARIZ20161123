@@ -1,21 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:paddingLeft="@dimen/paddingleftright"
+    android:paddingRight="@dimen/paddingleftright"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
 
 
     <TextView
+
         android:gravity="center_horizontal"
+        android:layout_marginTop="25dp"
         android:text="步骤二：系统分析与冲突表达"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:textAppearance="@style/TextAppearance.AppCompat.Title"
+        />
 
     <TextView
-        android:text="forth_fg"
+        android:layout_marginTop="30dp"
+        android:text="陈述问题所在技术系统的主要要素："
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 
     <LinearLayout
+        android:paddingTop="10dp"
+        android:layout_marginTop="18dp"
+
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
@@ -29,6 +39,8 @@
     </LinearLayout>
 
     <LinearLayout
+        android:layout_marginTop="18dp"
+        android:paddingTop="10dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
@@ -42,6 +54,8 @@
     </LinearLayout>
 
     <LinearLayout
+        android:layout_marginTop="18dp"
+        android:paddingTop="10dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
@@ -55,6 +69,8 @@
     </LinearLayout>
 
     <LinearLayout
+        android:layout_marginTop="18dp"
+        android:paddingTop="10dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
@@ -67,24 +83,31 @@
             android:layout_height="wrap_content" />
     </LinearLayout>
 
-    <LinearLayout
+    <RelativeLayout
         android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
         <Button
-
+            android:visibility="gone"
             android:id="@+id/back_forth_fgm"
             android:layout_width="0dp"
-            android:layout_weight="1"
             android:layout_height="match_parent" />
-    <Button
-        android:text="下一步"
-        android:id="@+id/next_forth_fgm"
-        android:layout_width="0dp"
-        android:layout_weight="1"
-        android:layout_height="match_parent" />
+        <Button
+            android:id="@+id/next_forth_fgm"
+
+            android:layout_marginTop="50dp"
+            android:text="下一步"
+            android:textSize="19sp"
+            android:textColor="#ffff"
+            android:background="@drawable/button"
+            android:layout_width="331dp"
+            android:layout_height="46dp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Button"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            />
 
 
-    </LinearLayout>
+    </RelativeLayout>
 
 </LinearLayout>

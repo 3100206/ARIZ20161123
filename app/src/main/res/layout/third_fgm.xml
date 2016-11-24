@@ -1,58 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
-    <LinearLayout
-        android:orientation="vertical"
-        android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:paddingTop="75dp"
+    android:paddingLeft="@dimen/paddingleftright"
+    android:paddingRight="@dimen/paddingleftright"
+    >
+
+
+    <include layout="@layout/child_view_2nd_fgm"
+
+
+        />
+    <RelativeLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content">
-        <TextView
-            android:text="fg4"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
-
-        <EditText
-            android:text="测试：请输入"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
-
-        <TextView
-            android:text="fg4"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
-
-        <EditText
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
-
-
-        <TextView
-            android:text="fg4"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
-
-        <EditText
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
-
-
-        <TextView
-            android:text="fg4"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
-
-        <EditText
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
-
-    </LinearLayout>
-
-    <Button
-        android:id="@+id/next_third_fgm"
-        android:text="保存"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
-
-
+        <Button
+            android:layout_marginTop="50dp"
+            android:textSize="19sp"
+            android:textColor="#ffff"
+            android:background="@drawable/button"
+            android:layout_width="331dp"
+            android:layout_height="46dp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Button"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/next_third_fgm"
+            android:text="@string/save"
+             />
+    </RelativeLayout>
 
 </LinearLayout>
