@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:text="问题的解决方法："
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <EditText
+        android:ems="20"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <EditText
+        android:ems="20"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <EditText
+        android:ems="20"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <EditText
+        android:ems="20"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:text="评价："
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+
+            android:layout_marginRight="20dp"
+            android:textSize="19sp"
+            android:textColor="#ffff"
+            android:background="@drawable/button_red"
+            android:layout_width="240dp"
+            android:layout_height="46dp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Button"
+            android:text="评价不满足"
+            android:layout_toLeftOf="@+id/middle"
+
+             />
+        <View
+            android:layout_centerInParent="true"
+            android:layout_centerVertical="true"
+            android:id="@+id/middle"
+            android:layout_width="1dp"
+            android:layout_height="1dp"/>
+
+        <Button
+            android:layout_marginLeft="20dp"
+            android:textSize="19sp"
+            android:textColor="#ffff"
+            android:background="@drawable/button"
+            android:layout_width="240dp"
+            android:layout_height="46dp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Button"
+            android:text="评价满足"
+            android:layout_toRightOf="@+id/middle"
+            />
+
+
+    </RelativeLayout>
+
+
+
+
+
+
+
+
+</LinearLayout>

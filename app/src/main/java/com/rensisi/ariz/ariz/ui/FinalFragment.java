@@ -23,6 +23,9 @@ public class FinalFragment extends Next {
             case 3:
                 view = inflater.inflate(R.layout.third_fgm, container, false);
                 break;
+            case 7:
+                view = inflater.inflate(R.layout.seventh_fgm, container, false);
+                break;
         }
 
         return view;
