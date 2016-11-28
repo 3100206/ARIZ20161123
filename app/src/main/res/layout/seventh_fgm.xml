@@ -1,29 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:paddingLeft="@dimen/paddingleftright"
+    android:paddingRight="@dimen/paddingleftright"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
 
     <TextView
+        android:textAppearance="@style/TextAppearance.AppCompat.Title"
+        android:layout_marginTop="20dp"
         android:text="问题的解决方法："
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 
     <EditText
+        android:layout_marginTop="20dp"
         android:ems="20"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 
     <EditText
+        android:layout_marginTop="20dp"
+        android:ems="20"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <EditText        android:layout_marginTop="20dp"
         android:ems="20"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 
     <EditText
-        android:ems="20"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
-
-    <EditText
+        android:layout_marginTop="20dp"
         android:ems="20"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
@@ -34,15 +41,34 @@
         android:layout_height="wrap_content" />
 
     <TextView
+        android:text="1、是否很好地实现了理想解目标；"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:text="2、是否解决了一个物理冲突；"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:text="3、方案是否易实现；"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:singleLine="false"
+        android:text="4、新系统是否包含了至少一个易控元素"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
 
     <RelativeLayout
+
+        android:layout_marginTop="40dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
         <Button
-
+            android:layout_marginLeft="10dp"
             android:layout_marginRight="20dp"
             android:textSize="19sp"
             android:textColor="#ffff"
@@ -63,6 +89,8 @@
 
         <Button
             android:layout_marginLeft="20dp"
+            android:layout_marginRight="10dp"
+
             android:textSize="19sp"
             android:textColor="#ffff"
             android:background="@drawable/button"
