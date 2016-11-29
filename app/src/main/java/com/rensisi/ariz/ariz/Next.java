@@ -11,6 +11,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 
+import com.rensisi.ariz.ariz.it.Reused;
 import com.rensisi.ariz.ariz.ui.Judgable;
 
 import java.util.ArrayList;
@@ -20,7 +21,7 @@ import java.util.List;
  * Created by kellen_home on 2016/11/16.
  */
 
-public abstract class Next extends Fragment implements Judgable{
+public abstract class Next extends Fragment implements Judgable {
 
     Button mNextButton;
     Button mBackButton;
@@ -48,7 +49,7 @@ public abstract class Next extends Fragment implements Judgable{
         this.fragmentType = fragmentType;
     }
 
-    public Next createFragment(Context context, Next currentfragment, Bundle mSolvetion){
+    public Next createFragment(Context context, Next currentfragment, Bundle mSolvetion) {
         //TODO
         //完成Fragment的实例化
         return null;

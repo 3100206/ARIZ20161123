@@ -2,12 +2,11 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:paddingLeft="@dimen/paddingleftright"
     android:paddingRight="@dimen/paddingleftright"
+    android:id="@+id/l_4_fgm"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-
     <TextView
-
         android:gravity="center_horizontal"
         android:layout_marginTop="25dp"
         android:text="步骤二：系统分析与冲突表达"
@@ -25,7 +24,6 @@
     <LinearLayout
         android:paddingTop="10dp"
         android:layout_marginTop="18dp"
-
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 

@@ -7,13 +7,17 @@ import android.support.design.widget.Snackbar;
 import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.View;
 
 import com.rensisi.ariz.ariz.Next;
 import com.rensisi.ariz.ariz.R;
+import com.rensisi.ariz.ariz.it.Reused;
 
-public class ApplicateActivity extends AppCompatActivity {
+import java.util.ArrayList;
 
+public class ApplicateActivity extends AppCompatActivity implements Reused{
+    ArrayList<View> reusedView;
     Fragment mFragment;
     Next mFrag;
 
@@ -33,5 +37,19 @@ public class ApplicateActivity extends AppCompatActivity {
     @Override
     public void onSaveInstanceState(Bundle outState, PersistableBundle outPersistentState) {
         super.onSaveInstanceState(outState, outPersistentState);
+    }
+
+
+    @Override
+    public ArrayList<View> getReuseView() {
+        return this.reusedView;
+    }
+
+    @Override
+    public void setReuseView(View view) {
+        if (reusedView == null){
+            reusedView = new ArrayList<View>();
+        }
+        this.reusedView.add(view);
     }
 }

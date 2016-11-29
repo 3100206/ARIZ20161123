@@ -27,6 +27,7 @@ public class FirstFragment extends Next {
         View view = null;
         Log.d("FirstFragment",getFragmentType() + "");
         int type = getFragmentType();
+        ApplicateActivity activity;
         switch (type) {
             case 1:
                 view = inflater.inflate(R.layout.first_fgm, container, false);
@@ -35,11 +36,15 @@ public class FirstFragment extends Next {
             case 2:
                 view = inflater.inflate(R.layout.second_fgm, container, false);
                 nextButton = (Button) view.findViewById(R.id.next_second_fgm);
+                activity = (ApplicateActivity) getActivity();
+                activity.setReuseView(view.findViewById(R.id.l_2_fgm));
                 break;
             case 4:
                 view = inflater.inflate(R.layout.forth_fgm, container, false);
                 nextButton = (Button) view.findViewById(R.id.next_forth_fgm);
                 backButton = (Button) view.findViewById(R.id.back_forth_fgm);
+                activity = (ApplicateActivity) getActivity();
+                activity.setReuseView(view.findViewById(R.id.l_4_fgm));
             default:
                 break;
         }
