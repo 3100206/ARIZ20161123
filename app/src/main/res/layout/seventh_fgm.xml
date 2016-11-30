@@ -63,12 +63,13 @@
         android:layout_height="wrap_content" />
 
     <RelativeLayout
-
+        android:layout_marginBottom="@dimen/marginButton"
         android:layout_marginTop="40dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
         <Button
+            android:id="@+id/next_button_fgm7"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="20dp"
             android:textSize="19sp"
@@ -89,9 +90,9 @@
             android:layout_height="1dp"/>
 
         <Button
+            android:id="@+id/save_button_fgm7"
             android:layout_marginLeft="20dp"
             android:layout_marginRight="10dp"
-
             android:textSize="19sp"
             android:textColor="#ffff"
             android:background="@drawable/button"
@@ -101,15 +102,7 @@
             android:text="评价满足"
             android:layout_toRightOf="@+id/middle"
             />
-
-
     </RelativeLayout>
-
-
-
-
-
-
 
 
 </LinearLayout>

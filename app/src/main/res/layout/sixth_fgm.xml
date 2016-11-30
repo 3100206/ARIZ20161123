@@ -28,6 +28,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
         <EditText
+            android:ems="20"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
     </LinearLayout>
@@ -43,6 +44,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
         <EditText
+            android:ems="20"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
     </LinearLayout>
@@ -58,6 +60,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
         <EditText
+            android:ems="20"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
     </LinearLayout>
@@ -68,15 +71,17 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
 
-    <TextView
+    <Button
+        android:layout_gravity="center_horizontal"
+        android:gravity="center"
         android:layout_marginTop="10dp"
-        android:gravity="center_horizontal"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
         android:text="76个标准"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+         />
 
     <RelativeLayout
-        android:layout_marginBottom="50dp"
+        android:layout_marginBottom="@dimen/marginButton"
         android:layout_marginTop="20dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
@@ -92,7 +97,7 @@
             android:textAppearance="@style/TextAppearance.AppCompat.Button"
             android:text="已解决"
             android:layout_toLeftOf="@+id/middle"
-
+            android:id="@+id/save_button_fgm6"
             />
         <View
             android:layout_centerInParent="true"

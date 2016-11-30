@@ -5,13 +5,14 @@
     xmlns:android="http://schemas.android.com/apk/res/android" >
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/l_5_fgm"
-    android:paddingLeft="@dimen/paddingleftright"
-    android:paddingRight="@dimen/paddingleftright"
+    android:layout_marginRight="@dimen/paddingleftright"
+    android:layout_marginLeft="@dimen/paddingleftright"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="wrap_content">
 
 
     <TextView
+        android:gravity="center"
         android:id="@+id/title_fgm5"
         android:layout_marginTop="25dp"
         android:textAppearance="@style/TextAppearance.AppCompat.Title"
@@ -201,6 +202,8 @@
 
 
     </RelativeLayout>
+    </LinearLayout>
 
-</LinearLayout>
+
+
 </ScrollView>

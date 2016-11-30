@@ -28,7 +28,7 @@ public class ProceeFragment extends Next {
     Button saveButton;
     Button nextButton;
     private View mChild7;
-
+    ScrollRunner scrollRunner;
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -49,7 +49,8 @@ public class ProceeFragment extends Next {
                 extendView(mChild4, 1);
                 mChild2.findViewById(R.id.next_second_fgm).setVisibility(View.GONE);
                 mChild4.findViewById(R.id.next_forth_fgm).setVisibility(View.GONE);
-                new Handler().post(new ScrollRunner(scrollView));
+                scrollRunner = new ScrollRunner(scrollView);
+                new Handler().post(scrollRunner);
                 break;
             case 6:
                 break;
@@ -82,24 +83,35 @@ public class ProceeFragment extends Next {
 
     @Override
     public boolean next() {
+        int addPosition;
         switch (getFragmentType()){
             case 5:
-                extendView(mChild6,4);
+                addPosition = mViewgroup.getChildCount();
+                extendView(mChild6, addPosition);
                 saveButton.setVisibility(View.GONE);
                 nextButton.setVisibility(View.GONE);
                 nextButton = (Button) mChild6.findViewById(R.id.next_button_fgm6);
-//                saveButton = (Button) mChild6.findViewById(R.id.next_button_fgm6);
+                saveButton = (Button) mChild6.findViewById(R.id.save_button_fgm6);
+                setmSaveButton(saveButton);
+                setmNextButton(nextButton);
+                setFragmentType(6);
                 break;
             case 6:
-                extendView(mChild7, 4);
-
+                addPosition =mViewgroup.getChildCount();
+                extendView(mChild7, addPosition);
+                saveButton.setVisibility(View.GONE);
+                nextButton.setVisibility(View.GONE);
+                nextButton = (Button) mChild6.findViewById(R.id.next_button_fgm7);
+                saveButton = (Button) mChild6.findViewById(R.id.save_button_fgm7);
                 break;
         }
+        new Handler().post(scrollRunner);
         return false;
     }
 
     @Override
     public boolean back() {
+        new Handler().post(scrollRunner);
         return false;
     }
 
