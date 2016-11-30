@@ -36,7 +36,8 @@
             android:name=".ui.UserActivity"
             android:label="@string/title_activity_user"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".activity.FavoriteCaseActivity"></activity>
+        <activity android:name=".activity.FavoriteCaseActivity" />
+        <activity android:name=".activity.FavoteKnowledgeActivity"></activity>
     </application>
 
 </manifest>
