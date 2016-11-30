@@ -27,6 +27,7 @@ public class ProceeFragment extends Next {
     private View child;
     Button saveButton;
     Button nextButton;
+    private View mChild7;
 
     @Nullable
     @Override
@@ -40,6 +41,7 @@ public class ProceeFragment extends Next {
                 mChild2 = inflater.inflate(R.layout.second_fgm, container, false).findViewById(R.id.l_2_fgm);
                 mChild4 = inflater.inflate(R.layout.forth_fgm, container, false).findViewById(R.id.l_4_fgm);
                 mChild6 = inflater.inflate(R.layout.sixth_fgm, container, false).findViewById(R.id.l_6_fgm);
+                mChild7 = inflater.inflate(R.layout.seventh_fgm, container, false).findViewById(R.id.l_7_fgm);
                 nextButton = (Button) mFragment_5.findViewById(R.id.bt_next_fgm5);
                 saveButton = (Button) mFragment_5.findViewById(R.id.bt_save_fgm5);
                 ScrollView scrollView = (ScrollView) mFragment_5.findViewById(R.id.scv_fgm5);
@@ -82,11 +84,14 @@ public class ProceeFragment extends Next {
     public boolean next() {
         switch (getFragmentType()){
             case 5:
-                extendView(mChild6,2);
+                extendView(mChild6,4);
                 saveButton.setVisibility(View.GONE);
                 nextButton.setVisibility(View.GONE);
+                nextButton = (Button) mChild6.findViewById(R.id.next_button_fgm6);
+//                saveButton = (Button) mChild6.findViewById(R.id.next_button_fgm6);
                 break;
             case 6:
+                extendView(mChild7, 4);
 
                 break;
         }
@@ -98,7 +103,7 @@ public class ProceeFragment extends Next {
         return false;
     }
 
-    //这里会跳过第六步
+    //这里会跳过第六步，直接进入最后一页
     @Override
     public boolean save() {
         return false;

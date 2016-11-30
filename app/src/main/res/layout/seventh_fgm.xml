@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/l_7_fgm"
     android:paddingLeft="@dimen/paddingleftright"
     android:paddingRight="@dimen/paddingleftright"
     android:orientation="vertical" android:layout_width="match_parent"
