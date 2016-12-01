@@ -1,5 +1,6 @@
 package com.rensisi.ariz.ariz;
 
+import android.content.Context;
 import android.graphics.Canvas;
 import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
@@ -7,7 +8,15 @@ import android.os.Environment;
 import android.text.Html;
 import android.text.Spanned;
 import android.util.Log;
+import android.view.WindowManager;
 import android.widget.TextView;
+
+import com.rensisi.ariz.ariz.util.MyAppContext;
+
+import java.util.HashMap;
+import java.util.HashSet;
+
+import static java.security.AccessController.getContext;
 
 /**
  * Created by kellen_home on 2016/11/30.
@@ -15,6 +24,7 @@ import android.widget.TextView;
 
 public class ImageGetter implements Html.ImageGetter {
 
+    private  HashMap<String, Integer> hashMap;
     private TextView _mHtmlText;
     private String mImgPath;
     private Drawable mDefaultDrawable;
@@ -23,13 +33,23 @@ public class ImageGetter implements Html.ImageGetter {
     //http://blog.sina.com.cn/s/blog_7cdaf8b60102vrl1.html
 //    http://blog.csdn.net/yanzi1225627/article/details/24590029
 //    http://www.jb51.net/article/88523.htm
+
+
 /*  实现的思路大致如此：
     1.将文章Html化，就是sp。
     Spanned sp = Html.fromHtml(string, new ImageGetter( ), null);
     2.设置textview。
     textview.setText(sp);
 
+
+
          */
+
+    public ImageGetter() {
+        hashMap = new HashMap();
+        hashMap.put("R.drawable.th",Integer.valueOf(R.drawable.th));
+    }
+
     /**
      * 重写这个方法，返回一个drawable，要定义好drawable的bounds。
      * @param source
@@ -37,6 +57,23 @@ public class ImageGetter implements Html.ImageGetter {
      */
     @Override
     public Drawable getDrawable(String source) {
+        Log.d("s",source);
+//        Drawable drawable = MyAppContext.getInstance().getContext().getResources().getDrawable(Integer.parseInt(source));
+        Context context = MyAppContext.getInstance().getContext();
+        Drawable drawable = context.getResources().getDrawable(hashMap.get(source));
+        if (drawable != null) {
+            WindowManager windowManager = (WindowManager) context.getSystemService(Context.WINDOW_SERVICE);
+            int windowWidth = windowManager.getDefaultDisplay().getWidth();
+            int windowHeight = windowManager.getDefaultDisplay().getHeight();
+            int drableWidth =  drawable.getIntrinsicWidth();
+            int drableHeight =  drawable.getIntrinsicHeight();
+            int left  = (windowWidth - drableWidth) / 2 - 64 ;
+            int right  = left + drableWidth;
+            drawable.setBounds(left, 0, right, drableHeight);
+
+            return drawable;
+        }
+
 //        String imgKey = String.valueOf(source.hashCode());
 //        String path = Environment.getExternalStorageDirectory() + mImgPath;
 //
@@ -58,7 +95,7 @@ public class ImageGetter implements Html.ImageGetter {
 //        MyDrawable drawable =
 
 
-        return null;
+        return drawable;
     }
 
     class MyDrawable extends BitmapDrawable {

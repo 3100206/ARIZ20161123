@@ -11,6 +11,7 @@ import android.widget.Button;
 
 import com.rensisi.ariz.ariz.R;
 import com.rensisi.ariz.ariz.activity.FavoriteCaseActivity;
+import com.rensisi.ariz.ariz.activity.FavoteKnowledgeActivity;
 
 public class FavorateActivity extends AppCompatActivity {
 
@@ -20,8 +21,8 @@ public class FavorateActivity extends AppCompatActivity {
         setContentView(R.layout.activity_favorate);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-        Button button = (Button)findViewById(R.id.save_button_fgm7);
-        button.setOnClickListener(new View.OnClickListener() {
+        Button casebutton = (Button)findViewById(R.id.bt_favo_case);
+        casebutton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent();
@@ -29,6 +30,18 @@ public class FavorateActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        Button knowledgebutton = (Button)findViewById(R.id.bt_favo_know);
+        knowledgebutton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent();
+                intent.setClass(getApplication(), FavoteKnowledgeActivity.class);
+                startActivity(intent);
+            }
+        });
+
+
 
     }
 

@@ -9,7 +9,7 @@
             android:layout_marginBottom="50dp"
 
             android:layout_centerHorizontal="true"
-            android:id="@+id/next_button_fgm7"
+            android:id="@+id/bt_favo_know"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="20dp"
             android:textSize="19sp"
@@ -33,7 +33,7 @@
             android:layout_marginTop="50dp"
 
             android:layout_centerHorizontal="true"
-            android:id="@+id/save_button_fgm7"
+            android:id="@+id/bt_favo_case"
             android:layout_marginLeft="20dp"
             android:layout_marginRight="10dp"
             android:textSize="19sp"

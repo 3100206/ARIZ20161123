@@ -12,6 +12,7 @@ import com.rensisi.ariz.ariz.ui.BrowseActivity;
 import com.rensisi.ariz.ariz.ui.CaseActivity;
 import com.rensisi.ariz.ariz.ui.FavorateActivity;
 import com.rensisi.ariz.ariz.ui.UserActivity;
+import com.rensisi.ariz.ariz.util.MyAppContext;
 
 public class MainActivity extends AppCompatActivity {
     private TextView textView1;
@@ -25,6 +26,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        MyAppContext.getInstance().setContext(getApplicationContext());
         initView();
     }
 
