@@ -48,6 +48,7 @@ public class ImageGetter implements Html.ImageGetter {
     public ImageGetter() {
         hashMap = new HashMap();
         hashMap.put("R.drawable.th",Integer.valueOf(R.drawable.th));
+
     }
 
     /**
@@ -60,7 +61,9 @@ public class ImageGetter implements Html.ImageGetter {
         Log.d("s",source);
 //        Drawable drawable = MyAppContext.getInstance().getContext().getResources().getDrawable(Integer.parseInt(source));
         Context context = MyAppContext.getInstance().getContext();
-        Drawable drawable = context.getResources().getDrawable(hashMap.get(source));
+        int imageID = context.getResources().getIdentifier(source, "drawable", context.getPackageName());
+//        Drawable drawable = context.getResources().getDrawable(hashMap.get(source));
+        Drawable drawable = context.getResources().getDrawable(imageID);
         if (drawable != null) {
             WindowManager windowManager = (WindowManager) context.getSystemService(Context.WINDOW_SERVICE);
             int windowWidth = windowManager.getDefaultDisplay().getWidth();
@@ -70,7 +73,6 @@ public class ImageGetter implements Html.ImageGetter {
             int left  = (windowWidth - drableWidth) / 2 - 64 ;
             int right  = left + drableWidth;
             drawable.setBounds(left, 0, right, drableHeight);
-
             return drawable;
         }
 
