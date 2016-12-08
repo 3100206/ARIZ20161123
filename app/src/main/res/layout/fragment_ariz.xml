@@ -4,23 +4,22 @@
     android:id="@+id/content_ariz"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-
     tools:context="com.rensisi.ariz.ariz.ui.ArizActivityFragment"
     tools:showIn="@layout/activity_ariz">
 
     <TextView
-        android:text="TextView"
-        android:background="@color/colorAccent"
+        android:textSize="18sp"
         android:id="@+id/tv_fragment_applicate"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
-    <TextView
-        android:text="Imageview"
-        android:background="@color/colorPrimary"
-        android:id="@+id/iv_fragment_applicate"
+    <ImageView
+        android:layout_centerInParent="true"
         android:visibility="gone"
+        android:adjustViewBounds="true"
+        android:id="@+id/iv_fragment_applicate"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
+
 
 
 

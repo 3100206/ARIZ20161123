@@ -18,8 +18,8 @@
         <activity android:name=".ui.CaseActivity" />
         <activity
             android:name=".ui.ArizActivity"
-            android:label="@string/title_activity_ariz"
-            android:theme="@style/AppTheme.NoActionBar" />
+            android:label="@string/title_activity_case"
+            />
         <activity
             android:name=".ui.ApplicateActivity"
             android:label="@string/title_activity_applicate"
@@ -27,17 +27,21 @@
         <activity
             android:name=".ui.BrowseActivity"
             android:label="@string/title_activity_browse"
-            android:theme="@style/AppTheme.NoActionBar" />
+             />
         <activity
             android:name=".ui.FavorateActivity"
             android:label="@string/title_activity_favorate"
-            android:theme="@style/AppTheme.NoActionBar" />
+             />
         <activity
             android:name=".ui.UserActivity"
             android:label="@string/title_activity_user"
-            android:theme="@style/AppTheme.NoActionBar" />
+             />
         <activity android:name=".activity.FavoriteCaseActivity" />
-        <activity android:name=".activity.FavoteKnowledgeActivity"></activity>
+        <activity android:name=".activity.FavoteKnowledgeActivity" />
+        <activity
+            android:name=".activity.CaseContentActivity"
+            android:label="@string/title_activity_case"
+            />
     </application>
 
 </manifest>

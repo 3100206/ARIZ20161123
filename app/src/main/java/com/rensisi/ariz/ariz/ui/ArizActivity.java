@@ -18,6 +18,8 @@ import android.widget.Toast;
 
 import com.rensisi.ariz.ariz.R;
 
+import java.util.List;
+
 import static com.rensisi.ariz.ariz.ui.ApplicateActivityFragment.DISPLAYTYPE;
 import static com.rensisi.ariz.ariz.ui.ApplicateActivityFragment.IMAGE;
 import static com.rensisi.ariz.ariz.ui.ApplicateActivityFragment.WORD;
@@ -32,27 +34,36 @@ public class ArizActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_ariz);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
         mPlanetTitles = getResources().getStringArray(R.array.list_ariz);
         mDrawerList = (ListView) findViewById(R.id.left_drawer);
         mDrawerList.setAdapter(new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, mPlanetTitles));
         mDrawerList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Toast.makeText(getApplicationContext(),position + "position",Toast.LENGTH_SHORT).show();
                 //fragment切换
                 Fragment fragment = new ArizActivityFragment();
                 Bundle bundle = new Bundle();
-                if (position == 2){
-                    bundle.putString(DISPLAYTYPE, IMAGE);
-                } else {
-                    bundle.putString(DISPLAYTYPE, WORD);
+                switch (position) {
+                    case 0:
+                        bundle.putInt(DISPLAYTYPE, 0);
+                        break;
+                    case 1:
+                        bundle.putInt(DISPLAYTYPE, 1);
+                        break;
+                    case 2:
+                        bundle.putInt(DISPLAYTYPE, 2);
+                        break;
+                    case 3:
+                        bundle.putInt(DISPLAYTYPE, 3);
+                    case 4:
+                        bundle.putInt(DISPLAYTYPE, 4);
+
                 }
                 fragment.setArguments(bundle);
                 FragmentManager fragmentManager = getSupportFragmentManager();
                 FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
                 fragmentTransaction.replace(R.id.displayfragment_applicate_activity,fragment);
+                fragmentTransaction.commit();
             }
         });
     }

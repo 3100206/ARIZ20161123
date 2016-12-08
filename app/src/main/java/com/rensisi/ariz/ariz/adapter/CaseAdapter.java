@@ -15,10 +15,11 @@ import java.util.List;
  */
 
 public class CaseAdapter extends BaseAdapter {
-    private List<Object> mAppList;
+    private List<String> mAppList;
     Context context;
 
-    public CaseAdapter(List<Object> mAppList) {
+    public CaseAdapter(Context context, List<String> mAppList) {
+        this.context = context;
         this.mAppList = mAppList;
     }
 
@@ -44,8 +45,7 @@ public class CaseAdapter extends BaseAdapter {
             new ViewHolder(convertView);
         }
         ViewHolder holder = (ViewHolder) convertView.getTag();
-//        ApplicationInfo item = getItem(position);
-//        holder.tv_name.setText(item.loadLabel(getPackageManager()));
+        holder.title.setText(mAppList.get(position));
         return convertView;
     }
 
@@ -55,6 +55,10 @@ public class CaseAdapter extends BaseAdapter {
             title = (TextView) view.findViewById(R.id.title_lv);
             view.setTag(this);
         }
+
+
+
+
     }
 }
 

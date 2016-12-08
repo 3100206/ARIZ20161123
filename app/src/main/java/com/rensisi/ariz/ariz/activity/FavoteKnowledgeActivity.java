@@ -17,10 +17,10 @@ public class FavoteKnowledgeActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_favote_knowledge);
-        TextView textView = (TextView)findViewById(R.id.tv_case_content);
-        String content = getResources().getString(R.string.case1);
-        Spanned sp = Html.fromHtml(content, new ImageGetter(), null);
-        textView.setText(sp);
+//        TextView textView = (TextView)findViewById(R.id.tv_case_content);
+//        String content = getResources().getString(R.string.case1);
+//        Spanned sp = Html.fromHtml(content, new ImageGetter(), null);
+//        textView.setText(sp);
 
     }
 }

@@ -19,27 +19,6 @@ public class FavorateActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_favorate);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
-        Button casebutton = (Button)findViewById(R.id.bt_favo_case);
-        casebutton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent();
-                intent.setClass(getApplication(), FavoriteCaseActivity.class);
-                startActivity(intent);
-            }
-        });
-
-        Button knowledgebutton = (Button)findViewById(R.id.bt_favo_know);
-        knowledgebutton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent();
-                intent.setClass(getApplication(), FavoteKnowledgeActivity.class);
-                startActivity(intent);
-            }
-        });
 
 
 

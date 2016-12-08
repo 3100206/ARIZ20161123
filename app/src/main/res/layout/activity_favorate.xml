@@ -19,17 +19,12 @@
             android:layout_height="46dp"
             android:textAppearance="@style/TextAppearance.AppCompat.Button"
             android:text="知识点收藏"
-            android:layout_above="@+id/middle"
+            android:layout_above="@+id/bt_favo_case"
             />
-        <View
-            android:layout_centerVertical="true"
-            android:layout_centerHorizontal="true"
-            android:id="@+id/middle"
-            android:layout_width="match_parent"
-            android:layout_height="1dp"/>
+
 
         <Button
-
+            android:layout_centerInParent="true"
             android:layout_marginTop="50dp"
 
             android:layout_centerHorizontal="true"
@@ -43,7 +38,24 @@
             android:layout_height="46dp"
             android:textAppearance="@style/TextAppearance.AppCompat.Button"
             android:text="案例收藏"
-            android:layout_below="@+id/middle"
+
+            />
+
+        <Button
+
+            android:layout_marginTop="100dp"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/bt_favo_case_applicate"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="10dp"
+            android:textSize="19sp"
+            android:textColor="#ffff"
+            android:background="@drawable/button"
+            android:layout_width="240dp"
+            android:layout_height="46dp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Button"
+            android:text="案例应用收藏"
+            android:layout_below="@+id/bt_favo_case"
             />
 
 
